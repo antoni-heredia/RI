@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[page]{appendix}
+\usepackage{listings}
+\usepackage{color}
+
+\addto\captionsspanish{\renewcommand\appendixpagename{Archivos de código}}
+
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{9}
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{9} 
+\DeclareFixedFont{\tti}{T1}{txtt}{m}{it}{9}
+\definecolor{comment}{RGB}{150,150,150}
+
+\lstset{
+	frame = single, 
+	extendedchars=true,	
+	showstringspaces=false,
+	inputencoding=latin1,
+	literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {ñ}{{\~n}}1
+	{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1,
+	language=Python,
+	basicstyle=\ttm,
+	otherkeywords={self},
+	keywordstyle=\ttb,
+	commentstyle=\tti\color{comment}
+	}
+
+
+
+
+% Indica el título del documento como la palabra "Práctica " seguida del número de práctica.
+\title{Práctica N}
+
+% Indica tu nombre completo
+\author{Antonio Jesús Heredia Castillo}
+
+\begin{document}
+
+\maketitle
+
+\section*{Ejercicio 1}
+
+% Incluye aquí el texto correspondiente al ejercicio 1
+
+\section*{Ejercicio 2}
+
+
+\section*{Ejercicio N}
+
+% Usa tantas secciones como ejercicios haya y las subsecciones que necesites
+
+
+
+
+% Debes incluir todos los archivos de código de Matlab que hayas generado.
+% Para ello introduce una sección por cada archivo dentro del entorno appendices
+% Sigue el esquema que tienes a continuación donde el título de la sección debe
+% coincidir con el nombre del archivo y mediante el comando \lstinputlisting
+% añades el texto del archivo. Recuerda que las rutas de los archivos .m deben
+% ser relativas a la ruta de este achivo .tex
+
+\begin{appendices}
+	% \section*{archivo1.py}
+	% \lstinputlisting{archivo1.py}
+
+% 	\section*{archivo2.py}
+% 	\lstinputlisting{archivo2.py}
+
+% 	\section*{archivoN.py}
+% 	\lstinputlisting{archivoN.py}
+
+	%Usa tantas secciones en el apéndice como archivos de código tengas.	
+	
+\end{appendices}
+
+\end{document}
