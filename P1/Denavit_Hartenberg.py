@@ -32,11 +32,11 @@ def algoritmo(parametros):
     return matriz_homogenea
 
 #Creo los simobolos qeu voy a usar en este ejemplo
-q1 , l1,l2, q2, l3, q3 = sp.symbols ('q1,l1,l2,q2,l3,q3')
+q1 , l1, q2,l2,q3, l3 = sp.symbols ('q1,l1,q2,l2,q3,l3')
 #Creo la matriz de entrada para el denavit_hatemberg, en este caso de 3x4
-entrada = np.array([[q1,l1,0,0],
-                    [np.pi/2,q2,0,np.pi/2],
-                    [0,l3+q3,0,0]])
+entrada = np.array([[q1,0,l1,0],
+                    [q2,0,l2,np.pi/2],
+                    [q3,l3,0,0]])
 #Ejecuto el algoritmo
 resultado = algoritmo(entrada)
 #Simplifico el resultado
@@ -50,13 +50,13 @@ print("El resulado han sido:")
 for i in resultado:
     print(i)
 
-print("---------Otro ejemplo----------")
-entrada2 = np.array([[q1,0,l1,0],[q2,0,l2,0]])
-resultado2 = algoritmo(entrada2)
-resultado2 = sp.nsimplify(resultado2,tolerance=1e-10)
-print("Los datos de entrada han sido:")
-for i in entrada2:
-    print(i)
-print("El resulado han sido:")
-for i in resultado2:
-    print(i)
+#print("---------Otro ejemplo----------")
+#entrada2 = np.array([[q1,0,l1,0],[q2,0,l2,0]])
+#resultado2 = algoritmo(entrada2)
+#resultado2 = sp.nsimplify(resultado2,tolerance=1e-10)
+#print("Los datos de entrada han sido:")
+#for i in entrada2:
+#    print(i)
+#print("El resulado han sido:")
+#for i in resultado2:
+#    print(i)
